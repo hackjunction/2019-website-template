@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "faq",
+  "info": {
+    "name": "faq",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "question": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "answer": {
+      "required": true,
+      "type": "text"
+    },
+    "isTransportationFaq": {
+      "type": "boolean"
+    }
+  }
+}

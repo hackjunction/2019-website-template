@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+.ImageSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+
+    @include bp-full {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &--left {
+        width: 100%;
+        max-width: 20rem;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__image {
+            width: 100%;
+            object-fit: contain;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+    }
+
+    &--right {
+        width: 100%;
+        max-width: 620px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include bp-full {
+            margin-left: 25px;
+            align-items: flex-start;
+        }
+
+        &__content {
+            font-size: 18px;
+            font-family: 'Lato';
+        }
+    }
+
+    &--fontColor {
+        &__white {
+            .ImageSection--right {
+                &__title {
+                    color: white;
+                }
+                &__content {
+                    color: white;
+                }
+            }
+        }
+        &__black {
+            .ImageSection--right {
+                &__content {
+                    color: black;
+                }
+                &__title {
+                    color: black;
+                }
+            }
+        }
+    }
+}

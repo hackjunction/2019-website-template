@@ -1,0 +1,172 @@
+@import '../../styles/variables.scss';
+
+.wrapper,
+.jobItemLeft,
+.jobItemRight {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    background: $white;
+    margin-bottom: 2rem;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    align-items: center;
+    @include bp-custom(800px) {
+        flex-direction: row;
+        align-items: initial;
+    }
+    .logoWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+    }
+}
+
+.jobItemLeft {
+    padding-left: 1rem;
+    width: 80%;
+    * {
+        color: black;
+    }
+    align-items: center;
+    @include bp-custom(800px) {
+        width: 50%;
+        align-items: initial;
+    }
+}
+.jobItemRight {
+    width: 100%;
+    align-items: center;
+    * {
+        text-align: center;
+    }
+    @include bp-custom(800px) {
+        padding-left: 3rem;
+        align-items: initial;
+        * {
+            text-align: left;
+        }
+    }
+}
+
+.jobDescription {
+    width: 90%;
+    max-width: 600px;
+    color: $black;
+    * {
+        color: $black;
+        text-align: left;
+    }
+
+    code {
+        font-size: 15px;
+    }
+    a {
+        color: $link-colour;
+    }
+}
+
+.skillsTitle {
+    color: black;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    @include bp-custom(700px) {
+        text-align: left;
+    }
+}
+
+.underline {
+    height: 1px;
+    background: black;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.endsTitle {
+    margin-top: 1rem;
+    align-self: center;
+}
+.endsBlock {
+    background: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+
+    &Title {
+        color: white;
+    }
+
+    &Date {
+        text-align: center;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: bold;
+    }
+}
+.jobSkills {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+
+    :last-child {
+        .jobSkillsBlockDivider {
+            display: none;
+        }
+    }
+
+    &Block {
+        background: $main-color1;
+
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &Title {
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        &Divider {
+            background: white;
+            height: 20px;
+            width: 2px;
+        }
+    }
+}
+
+.readmore {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    font-size: 22px;
+    text-align: center;
+    background: $link-colour;
+    color: $white;
+    padding: 0.5rem;
+    min-width: 200px;
+    border-radius: 7px;
+    align-self: center;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

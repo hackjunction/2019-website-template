@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "eventdates",
+  "info": {
+    "name": "eventdates",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "displayDate": {
+      "type": "string"
+    },
+    "duringJunctionWeek": {
+      "type": "boolean"
+    },
+    "isVolunteerDate": {
+      "type": "boolean"
+    },
+    "showOnFrontPage": {
+      "type": "boolean"
+    },
+    "date": {
+      "type": "date",
+      "required": true,
+      "default": "2019-01-31T00:00:00.000Z"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

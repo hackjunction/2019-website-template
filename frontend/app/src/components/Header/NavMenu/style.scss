@@ -1,0 +1,116 @@
+@import '../../../styles/variables.scss';
+
+.NavMenuWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.NavMenuOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    z-index: 2;
+
+    &-open {
+        background: rgba($black, 0.75);
+        pointer-events: all;
+    }
+}
+
+.NavMenu {
+    position: fixed;
+    top: 0;
+    left: -1.2 * $bp-small;
+    bottom: 0;
+    z-index: 3;
+    width: 80%;
+    max-width: $bp-small;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: all;
+    transition: none;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &-open {
+        left: 0;
+        transition: all 0.4s ease;
+    }
+
+    &--inner {
+        width: 100%;
+        max-width: 300px;
+        margin: 50px 0;
+        flex: 1;
+        padding: $padding-page;
+        @include bp-med {
+            margin: 100px 0;
+            padding: 0;
+        }
+        @include bp-full {
+            margin-left: -100px;
+        }
+        &__logo {
+            //width: 100%;
+            max-width: 200px;
+            @include bp-custom(400px) {
+                max-width: 250px;
+            }
+            @include bp-custom(600px) {
+                max-width: 300px;
+            }
+            @include bp-full {
+                max-width: 380px;
+            }
+        }
+
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &-item {
+                color: $black;
+                font-size: 20px;
+                line-height: 26px;
+                text-decoration: none;
+                text-align: left;
+
+                @include bp-med {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+
+            &-title {
+                color: rgba($black, 0.4);
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: bold;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                text-align: left;
+            }
+        }
+    }
+    &--bottom {
+        flex-direction: flex-end;
+        &-logo {
+            width: 80%;
+        }
+    }
+}

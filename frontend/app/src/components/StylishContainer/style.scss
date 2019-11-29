@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.StylishContainer {
+    margin-left: -$padding-page;
+    margin-right: -$padding-page;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    &-left,
+    &-right {
+        align-self: stretch;
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+    &-right__image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    &-left__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+    &-children {
+        min-height: 600px;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        max-width: 1040px;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 0 $padding-page;
+    }
+}

@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "partner",
+  "info": {
+    "name": "partner",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "trackMentorDescription": {
+      "type": "text"
+    },
+    "showOnFrontPage": {
+      "type": "boolean"
+    },
+    "about": {
+      "type": "text"
+    },
+    "showOnTerminalPage": {
+      "type": "boolean"
+    },
+    "hidden": {
+      "type": "boolean"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "link": {
+      "type": "string"
+    },
+    "tracks": {
+      "collection": "track",
+      "via": "mentors"
+    },
+    "undefined": {
+      "collection": "job",
+      "via": "partner"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "partner"
+    }
+  }
+}

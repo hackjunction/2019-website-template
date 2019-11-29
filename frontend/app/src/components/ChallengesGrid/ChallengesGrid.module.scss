@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+.trackName {
+    font-size: 30px;
+    text-align: center;
+    @include bp-med {
+        font-size: 40px;
+    }
+}
+
+.trackDescription {
+    text-align: center;
+}
+
+.mentorTitle {
+    font-size: 24px;
+    text-align: center;
+}
+
+.challengesPlaceholder {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    margin: 0;
+}

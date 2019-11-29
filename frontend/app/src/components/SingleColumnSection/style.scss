@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+.SingleColumnSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &--title {
+        width: 100%;
+        max-width: 900px;
+        font-size: 25px;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 25px;
+        @include bp-med {
+            font-size: 40px;
+        }
+    }
+    &--subtitle {
+        max-width: 980px;
+        width: 100%;
+        * {
+            text-align: center !important;
+        }
+    }
+    &--content {
+        max-width: 980px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-center {
+            flex-direction: column;
+            @include bp-custom(950px) {
+                align-items: center;
+                flex-direction: row;
+            }
+        }
+    }
+}

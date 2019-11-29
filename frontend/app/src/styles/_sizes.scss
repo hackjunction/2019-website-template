@@ -1,0 +1,49 @@
+$bp-small: 600px;
+$bp-med: 900px;
+$bp-full: 1000px;
+
+@mixin bp-small-only {
+    @media (max-width: $bp-med - 1) {
+        @content;
+    }
+}
+
+@mixin bp-small {
+    @media (min-width: $bp-small) {
+        @content;
+    }
+}
+
+@mixin bp-med {
+    @media (min-width: $bp-med) {
+        @content;
+    }
+}
+
+@mixin bp-full {
+    @media (min-width: $bp-full) {
+        @content;
+    }
+}
+
+@mixin bp-custom($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+$padding-base: 10px;
+$padding-double: 20px;
+$padding-page: 30px;
+$content-max-width: 980px;
+$border-radius: 10px;
+
+%size-button {
+    max-width: 600px;
+    width: 29rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &:hover {
+        opacity: 0.9;
+    }
+}

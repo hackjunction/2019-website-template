@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+.TracksGrid {
+    width: 100%;
+    max-width: 980px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    @include bp-custom(1030px) {
+        justify-content: space-between;
+    }
+
+    &--container {
+        margin: 1px;
+        width: 100%;
+        max-width: 470px;
+        margin-bottom: -1em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

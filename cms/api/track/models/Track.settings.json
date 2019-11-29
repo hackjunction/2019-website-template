@@ -1,0 +1,38 @@
+{
+  "connection": "default",
+  "collectionName": "track",
+  "info": {
+    "name": "track",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mentors": {
+      "collection": "partner",
+      "via": "tracks",
+      "dominant": true
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "track"
+    }
+  }
+}

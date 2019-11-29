@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "hardware",
+  "info": {
+    "name": "hardware",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    }
+  }
+}

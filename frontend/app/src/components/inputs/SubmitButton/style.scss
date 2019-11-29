@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.SubmitButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    &--button {
+        background: $main-gradient2;
+        width: 310px;
+        height: 60px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background: rgba($white, 1);
+
+            .SubmitButton--button__text {
+                color: $black;
+            }
+        }
+
+        &__text {
+            transition: all 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
