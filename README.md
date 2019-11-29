@@ -1,27 +1,23 @@
-# Important! This project is undergoing some changes and documentation is currently outdated. Proceed with caution.
-
 # Usage as a JunctionX template site
 
 See `JUNCTIONX.md` for a quick guide on how to setup as a JunctionX website. For a more in-depth guide see below.
 
-# React + Strapi website template
+# Junction website template
 
-This is a website template for building a beautiful website that is 100% editable by non-technical users via a visual admin panel :)
+This is a template project which serves as a starting point for building your JunctionX website. It is a trimmed-down version of the Junction 2019 website at https://2019.hackjunction.com
 
-This template contains a demo of how to build an editable website while keeping a good level of control of the design and layout of the website. Non-technical users can use the admin panel to:
+This template includes a React.js frontend as well as a CMS built on Strapi. Most content on the website is editable via the CMS, and the React frontend provides a good level of customisability should you need it.
 
--   Add new pages to the website, with specific fields defined by the developer (title, header image, body text, etc...)
--   Control content on static pages (such as the home page) by editing text and image fields
--   Add list-based content such as FAQ's, upcoming events or team members, which are shown in pre-defined places in the app
-
-With this template, developers won't need to hardcode even the smallest pieces of text on the website if they don't want to. In general, it's a good balance between keeping the basic structure of the site in control of the developer, while giving content creators the necessary freedom and tools to edit the website content without having to ask the developer to make changes in the code.
-
-See below for how to set up the template for development, import some default content into the database, edit the site and eventually deploy it!
+See the below guides for instructions on how to work with this project. 
 
 # Setup
 
-See `SETUP.md` for a guide on how to set up this website on your local machine to see it in action
+See `SETUP.md` for a guide on how to set up this website in your local development environment
+
+# Customisation
+
+See `CUSTOMISATION.md` for a guide on how to customise the content and theming of the website for your needs. 
 
 # Deployment
 
-See `DEPLOYMENT.md` for guides on how to deploy your website to a hosting platform like Heroku or Digitalocean. NOTE: this guide is not yet finished
+See `DEPLOYMENT.md` for guides on how to deploy your website to a hosting platform like Heroku or Digitalocean.
