@@ -28,19 +28,6 @@ You should edit the main-color, main-gradient, background, background-gradient, 
 
 The `./frontend/app/src/services` directory contains helpers for accessing your CMS and other APIs. They will work out of the box, except for `newsletter.js` and `socialmedias.js` which require some additional config. More info included in the respective files.
 
-# Publishing the changes
-
-(TODO: Move this section under DEPLOYMENT.md)
-Publishing changes you made to the website is very simple. When you add content to the CMS the website is automatically updated. When you make changes to the files (like changing the colours etc.) you only need to use a couple simple commands.
-
-First push your changes to your GitHub repository.
-
-Then deploy the Backend and/or Frontend
-
-> npm run deploy-backend
-
-> npm run deploy-frontend
-
 # Using the CMS
 
 The first time you open the CMS you will be prompted to create an account.
@@ -85,6 +72,8 @@ console.log(media)
 ```
 
 ## Other content types
+
+Note: this part of the documentation is still in progress
 
 In addition to these two powerful content types, the project has some built-in list-based content types that may be useful for you.
 
