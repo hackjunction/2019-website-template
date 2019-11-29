@@ -1,6 +1,6 @@
 # Setup
 
-Start off by following the `SETUP.md` to setup your website.
+Start off by following the `SETUP.md` to setup your local development environment.
 
 # Config
 
@@ -8,13 +8,15 @@ Head over to `./frontend/app/src/config`
 
 ## Visible pages
 
-You can choose which pages you would like to be accessable in the live version of the website, open the `features.js` file and edit the `features` variable to have the pages you want visible to be set to `true`, and the pages you want to be hidden to `false`.
+You can choose which pages you would like to be visible on the live version of the website, open the `features.js` file and edit the `features` variable to have the pages you want visible to be set to `true`, and the pages you want to be hidden to `false`.
 
 `Note: all pages are visible by default`
 
 ## Developer mode
 
-If you made a developer site during the setup, all sites (even unpublished ones) will show up there.
+The website can be run in Developer mode, and this is controlled by a flag under `./frontend/app/src/config/config.js`, with the `IS_DEBUG` config variable. When the site is in Developer mode, all pages will be visible, even those hidden from the live site. Developer mode also enables some developer functionality, which makes editing the website content easier.
+
+By default, the page is in developer mode when it is being run under certain hostnames, such as `localhost`. You're free to come up with your own conditions for this.
 
 # Defining colours
 
@@ -24,10 +26,11 @@ You should edit the main-color, main-gradient, background, background-gradient, 
 
 # Services
 
-Head over to `./frontend/app/src/services` and edit the `newsletter.js` and `socialmedias.js` files, more info included in the files.
+The `./frontend/app/src/services` directory contains helpers for accessing your CMS and other APIs. They will work out of the box, except for `newsletter.js` and `socialmedias.js` which require some additional config. More info included in the respective files.
 
 # Publishing the changes
 
+(TODO: Move this section under DEPLOYMENT.md)
 Publishing changes you made to the website is very simple. When you add content to the CMS the website is automatically updated. When you make changes to the files (like changing the colours etc.) you only need to use a couple simple commands.
 
 First push your changes to your GitHub repository.
@@ -40,19 +43,19 @@ Then deploy the Backend and/or Frontend
 
 # Using the CMS
 
-<!-- ## Create an account
-
 The first time you open the CMS you will be prompted to create an account.
 
 ## Permissions
 
-After creating the account head over to `Plugins / Roles & Permissions`(scroll down on the leftside menu) and change the public roles permissions, so that all of the content types have `count, find` and `findone` on. Execpt for the `Contact Requests` which should only have `create` and nothing else. -->
+After creating the account head over to `Plugins / Roles & Permissions`(scroll down on the leftside menu) and change the public roles permissions, so that all of the content types have `count, find` and `findone` on. Execpt for the `Contact Requests` which should only have `create` and nothing else. 
+
+This allows your React app to fetch content from the CMS, and this setup step will need to be repeated every time you deploy the website to a new environment.
 
 ## Adding content to your website
 
-You can add content from the CMS by opening any `content-type` from the menu on the left and pressing the `+Add 'ContentType'` button. Fill in the required info and press save. Your content will now appear on the website after refreshing the page.
+You can add content from the CMS by opening any Content Type from the menu on the left and pressing the `+Add <ContentType>` button. Fill in the required info and press save. Your content will now appear on the website after refreshing the page.
 
-`Note: If a content type has no entries, it will not be rendered. For example, if you have no need for the guidelines component, it will not render if the guidelines content-type is empty.`
+`Note: If a content type has no entries, it will not be rendered. For example, if you have no need for the guidelines component, it will not render if the guidelines content-type has no content entries.`
 
 ## Content types
 
