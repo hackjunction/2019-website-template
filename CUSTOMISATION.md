@@ -57,13 +57,36 @@ You can add content from the CMS by opening any Content Type from the menu on th
 
 `Note: If a content type has no entries, it will not be rendered. For example, if you have no need for the guidelines component, it will not render if the guidelines content-type has no content entries.`
 
-## Content types
+## Static content
 
--   **Textfields:**
-    Add all the text on your website. Type in the key and content. You can find the corresponding keys for all Headers/Buttons/Titles/Text etc. Using the Developer mode and turning on Editor mode from the editor options. (Bottom right corner on the website in Dev mode)
+There are two "special" content types in the CMS, `textfields` and `mediafields`, which allow you to define arbitrary text and media content to show on your website. Usage is as follows: 
 
--   **Mediafields:**
-    Add the images on your website. You can find the Keys for all the images the same way as for Textfields.
+### Textfields
+
+- Create a new Textfield entry in the CMS, with a key of your choice, e.g. `homePageTitle`.
+- Add some text content corresponding to this key, e.g. `Welcome to my awesome website`.
+
+The project contains a `getText` helper function for accessing your textfields. Calling this function with the key of the textfield will return the content for that key.
+
+```
+const text = getText('homePageTitle')
+console.log(text)
+// Prints 'Welcome to my awesome site'
+```
+
+### Mediafields 
+
+Mediafields work in much the same way as textfields, except you're able to upload images or any other arbitrary files with a key of your choice. The corresponding helper function for using your mediafields is, you guessed it, `getMedia`. 
+
+```
+const media = getMedia('homePageImage')
+console.log(media)
+// Prints the media object
+```
+
+## Other content types
+
+In addition to these two powerful content types, the project has some built-in list-based content types that may be useful for you.
 
 -   **Challenges:**
     The `slug` field is the link for the challenge, ie. `slug: challenge-1` will result in the link being `/challenges/challenge-1` `priority` will sort the challenges by priority with the lowest number being first. `Partner` and `Track` need to be created in their corresponding Content-types before you can select them here.
